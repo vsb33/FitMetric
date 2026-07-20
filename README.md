@@ -6,7 +6,7 @@ O "FitMetric" é uma solução digital em formato de aplicativo móvel voltada p
 ---
 
 ##  Links do Projeto
-* **Protótipo Interativo no Figma (V1): https://www.figma.com/make/xVPbdk1wtDXcWj6Ltf93N6?node-id=0:1&p=f&t=9BLxdE4DAs8ANXK5-0&fullscreen=1&type=figmake
+* Protótipo Interativo no Figma (V1): https://www.figma.com/make/xVPbdk1wtDXcWj6Ltf93N6?node-id=0:1&p=f&t=9BLxdE4DAs8ANXK5-0&fullscreen=1&type=figmake
 
 ---
 

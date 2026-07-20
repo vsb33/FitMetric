@@ -5,12 +5,12 @@ O "FitMetric" é uma solução digital em formato de aplicativo móvel voltada p
 
 ---
 
-## 🔗 Links do Projeto
+##  Links do Projeto
 * **Protótipo Interativo no Figma (V1): https://www.figma.com/make/xVPbdk1wtDXcWj6Ltf93N6?node-id=0:1&p=f&t=9BLxdE4DAs8ANXK5-0&fullscreen=1&type=figmake
 
 ---
 
-## 👥 Equipe e Funções
+##  Equipe e Funções
 * **Integrante 1:** Vinícius- Product Owner / Analista de Requisitos
 * **Integrante 2:** Vinícius - Scrum Master / Designer UI-UX
 * **Integrante 3:** Manoel- Desenvolvedor Mobile Front-End
@@ -18,7 +18,7 @@ O "FitMetric" é uma solução digital em formato de aplicativo móvel voltada p
 
 ---
 
-## 📋 Requisitos Funcionais (RF)
+##  Requisitos Funcionais (RF)
 * **RF01 - Cadastro de Alunos:** O professor deve conseguir cadastrar alunos de 6 a 17 anos (Nome, Idade, Sexo).
 * **RF02 - Coleta de Dados Brutos:** O sistema deve permitir a inserção de medidas corporais brutas (Massa Corporal e Estatura) e resultados dos testes práticos.
 * **RF03 - Cronômetro Integrado:** O app deve possuir um cronômetro nativo na tela para os testes de corrida/velocidade com alertas sonoros.
@@ -31,7 +31,7 @@ O "FitMetric" é uma solução digital em formato de aplicativo móvel voltada p
 
 ---
 
-## 📄 Casos de Uso (Engenharia de Software)
+##  Casos de Uso (Engenharia de Software):
 
 ### Caso de Uso 01 (UC01): Manter Cadastro de Alunos
 * **RF Atendido:** RF01
@@ -66,7 +66,7 @@ O "FitMetric" é uma solução digital em formato de aplicativo móvel voltada p
 
 ---
 
-## 📊 Diagrama de Caso de Uso do Sistema
+##  Diagrama de Caso de Uso do Sistema:
 
 ```mermaid
 graph TD

@@ -11,6 +11,7 @@ O "FitMetric" é uma solução digital em formato de aplicativo móvel voltada p
 ---
 
 ##  Equipe e Funções
+
 * **Integrante 1:** Vinícius- Product Owner / Analista de Requisitos
 * **Integrante 2:** Vinícius - Scrum Master / Designer UI-UX
 * **Integrante 3:** Manoel- Desenvolvedor Mobile Front-End

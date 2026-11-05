@@ -67,7 +67,7 @@ O "FitMetric" é uma solução digital em formato de aplicativo móvel voltada p
 
 ---
 ``` mermaid
-graph TD
+flowchart TD
     %% Atores
     Prof["👨‍🏫 Professor"]
     Dir["🏫 Direção Escolar"]
@@ -88,7 +88,7 @@ graph TD
         UC10["UC10: Gerar Relatório Estatístico Consolidado"]
     end
 
-    %% Relacionamentos Atores -> Casos de Uso
+    %% Relacionamentos
     Prof --> UC01
     Prof --> UC02
     Prof --> UC03
@@ -97,13 +97,13 @@ graph TD
 
     Dir --> UC10
 
-    UC09 -.->|Envio via WhatsApp| Resp
+    UC09 -.->|"Envio via WhatsApp"| Resp
 
     %% Inclusões e Extensões
-    UC02 - -> UC03 : <<include>>
-    UC02 - -> UC04 : <<include>>
-    UC02 - -> UC06 : <<include>>
-    UC02 - -> UC07 : <<include>>
-    UC04 - -> UC05 : <<triggers>>
+    UC02 -.->|"<<include>>"| UC03
+    UC02 -.->|"<<include>>"| UC04
+    UC02 -.->|"<<include>>"| UC06
+    UC02 -.->|"<<include>>"| UC07
+    UC04 -.->|"dispara"| UC05
     UC05 <--> Sys
-    UC06 - -> UC08 : <<include>>
+    UC06 -.->|"<<include>>"| UC08

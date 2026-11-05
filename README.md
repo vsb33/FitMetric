@@ -107,3 +107,105 @@ flowchart TD
     UC04 -.->|"dispara"| UC05
     UC05 <--> Sys
     UC06 -.->|"<<include>>"| UC08
+```
+``` mermaid
+classDiagram
+    class Sexo {
+        <<enumeration>>
+        MASCULINO
+        FEMININO
+    }
+
+    class ZonaSaude {
+        <<enumeration>>
+        ZONA_SAUDE
+        ZONA_RISCO
+    }
+
+    class NivelDesempenho {
+        <<enumeration>>
+        FRACO
+        RAZOAVEL
+        BOM
+        MUITO_BOM
+        EXCELENCIA
+    }
+
+    class Professor {
+        +String id
+        +String nome
+        +String email
+        +String senha
+        +cadastrarAluno()
+        +registrarAvaliacao()
+    }
+
+    class Aluno {
+        +String id
+        +String nome
+        +int idade
+        +Sexo sexo
+        +validarIdade() boolean
+    }
+
+    class Avaliacao {
+        +String id
+        +Date data
+        +double massaCorporal
+        +double estatura
+        +double perimetroCintura
+        +boolean sincronizado
+        +salvarLocalmente()
+    }
+
+    class TestePratico {
+        +String id
+        +String nomeTeste
+        +double resultadoBruto
+        +double tempoSegundos
+    }
+
+    class Cronometro {
+        +double tempoDecorrido
+        +boolean emExecucao
+        +iniciar()
+        +pausar()
+        +resetar()
+        +emitirAlertaSonoro()
+    }
+
+    class CalculadoraPROESP {
+        +calcularIMC() double
+        +calcularRCE() double
+        +classificarZonaSaude() ZonaSaude
+        +classificarDesempenho() NivelDesempenho
+    }
+
+    class GerenciadorSincronizacao {
+        +boolean isOnline
+        +armazenarFilaOffline()
+        +sincronizarFila()
+    }
+
+    class RelatorioIndividual {
+        +String id
+        +gerarPDF()
+        +enviarWhatsApp()
+    }
+
+    class RelatorioConsolidado {
+        +Date periodoInicio
+        +Date periodoFim
+        +double percentualZonaRisco
+        +gerarEstatisticasEscolar()
+    }
+
+    %% Relacionamentos
+    Professor "1" -- "*" Aluno : cadastra
+    Aluno "1" -- "*" Avaliacao : realiza
+    Avaliacao "1" *-- "*" TestePratico : inclui
+    TestePratico ..> Cronometro : utiliza
+    Avaliacao ..> CalculadoraPROESP : calcula
+    Avaliacao ..> GerenciadorSincronizacao : gerencia
+    Avaliacao "1" -- "1" RelatorioIndividual : gera
+    Avaliacao "*" -- "1" RelatorioConsolidado : compoe

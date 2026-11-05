@@ -66,7 +66,7 @@ O "FitMetric" é uma solução digital em formato de aplicativo móvel voltada p
 * **Fluxo Alternativo:** Se a turma selecionada não tiver nenhuma avaliação feita, o sistema barra a geração e avisa: *"Dados insuficientes para esta turma"*.
 
 ---
-''' mermaid
+``` mermaid
 graph TD
     %% Atores
     Prof["👨‍🏫 Professor"]

@@ -67,29 +67,43 @@ O "FitMetric" é uma solução digital em formato de aplicativo móvel voltada p
 
 ---
 
-##  Diagrama de Caso de Uso do Sistema:
-
-```mermaid
 graph TD
-    %% Definição dos Atores
-    Professor((Professor de Ed. Física))
-    Direcao((Direção / Coordenação))
+    %% Atores
+    Prof["👨‍🏫 Professor"]
+    Dir["🏫 Direção Escolar"]
+    Resp["👨‍👩‍👧 Responsável / Pai"]
+    Sys["☁️ Servidor / Banco Remoto"]
 
-    %% Limite do Sistema FitMetric
-    subgraph Aplicativo FitMetric
-        UC01(UC01: Manter Cadastro de Alunos)
-        UC02(UC02: Registrar Avaliação Física e Prática)
-        UC03(UC03: Utilizar Cronômetro com Alerta Sonoro)
-        UC04(UC04: Sincronizar Dados em Modo Offline)
-        UC05(UC05: Emitir Relatório Individual para Pais via PDF)
-        UC06(UC06: Consultar Gráfico Estatístico da Escola)
+    %% Escopo do Sistema
+    subgraph Sistema_PROESP["Sistema de Avaliação Física Escolar (PROESP-Br)"]
+        UC01["UC01: Cadastrar Aluno (6-17 anos)"]
+        UC02["UC02: Coletar Medidas e Testes Práticos"]
+        UC03["UC03: Operar Cronômetro Nativo"]
+        UC04["UC04: Armazenar Dados Offline"]
+        UC05["UC05: Sincronizar Dados com Servidor"]
+        UC06["UC06: Calcular Indicadores de Saúde (IMC e RCE)"]
+        UC07["UC07: Classificar Desempenho Motor"]
+        UC08["UC08: Exibir Gráfico de Zonas de Saúde"]
+        UC09["UC09: Gerar e Enviar Relatório Individual (PDF)"]
+        UC10["UC10: Gerar Relatório Estatístico Consolidado"]
     end
 
-    %% Associações dos Atores com os Casos de Uso
-    Professor --> UC01
-    Professor --> UC02
-    Professor --> UC03
-    Professor --> UC04
-    Professor --> UC05
+    %% Relacionamentos Atores -> Casos de Uso
+    Prof --> UC01
+    Prof --> UC02
+    Prof --> UC03
+    Prof --> UC08
+    Prof --> UC09
 
-    Direcao --> UC06
+    Dir --> UC10
+
+    UC09 -.->|Envio via WhatsApp| Resp
+
+    %% Inclusões e Extensões
+    UC02 ..> UC03 : <<include>>
+    UC02 ..> UC04 : <<include>>
+    UC02 ..> UC06 : <<include>>
+    UC02 ..> UC07 : <<include>>
+    UC04 ..> UC05 : <<triggers>>
+    UC05 <--> Sys
+    UC06 ..> UC08 : <<include>>

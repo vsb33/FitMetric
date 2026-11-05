@@ -100,10 +100,10 @@ graph TD
     UC09 -.->|Envio via WhatsApp| Resp
 
     %% Inclusões e Extensões
-    UC02 ..> UC03 : <<include>>
-    UC02 ..> UC04 : <<include>>
-    UC02 ..> UC06 : <<include>>
-    UC02 ..> UC07 : <<include>>
-    UC04 ..> UC05 : <<triggers>>
+    UC02 - -> UC03 : <<include>>
+    UC02 - -> UC04 : <<include>>
+    UC02 - -> UC06 : <<include>>
+    UC02 - -> UC07 : <<include>>
+    UC04 - -> UC05 : <<triggers>>
     UC05 <--> Sys
-    UC06 ..> UC08 : <<include>>
+    UC06 - -> UC08 : <<include>>

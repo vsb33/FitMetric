@@ -104,7 +104,7 @@ flowchart TD
     UC02 -.->|"<<include>>"| UC04
     UC02 -.->|"<<include>>"| UC06
     UC02 -.->|"<<include>>"| UC07
-    UC04 -.->|"dispara"| UC05
+    UC04 -.-> UC05
     UC05 <--> Sys
     UC06 -.->|"<<include>>"| UC08
 ```
